@@ -3,4 +3,7 @@ he4to6_router: True
 he4to6__iface_name: hurricane0
 he4to6__ttl: 255
 
+he4to6__timeout_ifdown: 10
+he4to6__timeout_ifup: 10
+
 # vim: ft=ansible

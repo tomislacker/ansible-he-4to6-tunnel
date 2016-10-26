@@ -22,6 +22,10 @@ you'll be connecting from.
 
 ### Default Variables
 - `he4to6__iface_name` - Interface name (Defaults to `hurricane0`)
+- `he4to6__timeout_ifdown` - Number of seconds to wait while calling `ifdown`
+when cycling the interface
+- `he4to6__timeout_ifup` - Number of seconds to wait while calling `ifup` when
+cycling the interface
 - `he4to6__ttl` - TTL (Defaults to 255)
 
 ## Dependencies

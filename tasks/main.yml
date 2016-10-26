@@ -17,6 +17,6 @@
     mode=0644
 
 - name: Bring up new interface
-  shell: (timeout 10 ifdown {{ he4to6__iface_name }}; timeout 10 ifup {{ he4to6__iface_name }}) ; /bin/true
+  shell: (timeout {{ he4to6__timeout_ifdown }} ifdown {{ he4to6__iface_name }}; timeout {{ he4to6__timeout_ifup }} ifup {{ he4to6__iface_name }}) ; /bin/true
 
 # vim: ft=ansible
