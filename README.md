@@ -4,7 +4,12 @@ Assists in setting up a Hurricane Electric IP4-to-IP6 tunnel given
 configuration parameters yielded upon signup & creation.
 
 ## Requirements
-*N/A*
+- This only works for Debian-based distros
+- Your `/etc/network/interfaces` must be configured with:
+
+    ```
+    source /etc/network/interfaces.d/*.cfg
+    ```
 
 ## Role Variables
 
