@@ -1,9 +1,20 @@
 ---
-- debug: msg="Originating connection from {{ he4to6_local_addr }}"
+- name: Ensure configuration directory exists
+  file:
+    path=/etc/network/interfaces.d
+    state=directory
+    recurse=yes
+    owner=root
+    group=root
+    mode=0644
+
 - name: Create interface configuration
   template:
     src="interface.j2"
     dest="/etc/network/interfaces.d/{{ he4to6__iface_name }}.cfg"
+    owner=root
+    group=root
+    mode=0644
 
 - name: Bring up new interface
   shell: (timeout 10 ifdown {{ he4to6__iface_name }}; timeout 10 ifup {{ he4to6__iface_name }}) ; /bin/true
