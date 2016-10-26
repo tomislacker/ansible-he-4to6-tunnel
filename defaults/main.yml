@@ -1,0 +1,6 @@
+---
+he4to6_router: True
+he4to6__iface_name: hurricane0
+he4to6__ttl: 255
+
+# vim: ft=ansible

@@ -1,0 +1,8 @@
+auto {{ he4to6__iface_name }}
+iface {{ he4to6__iface_name }} inet6 v4tunnel
+    address {{ he4to6_addr }}
+    netmask {{ he4to6_mask }}
+    endpoint {{ he4to6_endpoint_ipv4 }}
+    local {{ he4to6_local_addr }}
+    gateway {{ he4to6_endpoint_ipv6 }}
+    ttl {{ he4to6__ttl }}
